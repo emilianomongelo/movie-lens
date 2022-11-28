@@ -20,8 +20,8 @@ export const Header = () => {
             justifyContent: 'center',
           }}
         >
-          {!['/movie-lens', '/movie-lens/'].includes(pathname) && (
-            <a href='/movie-lens/'>
+          {pathname !== '/' && (
+            <a href='/'>
               <Typography
                 component='h1'
                 variant='h2'

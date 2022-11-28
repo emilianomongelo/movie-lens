@@ -9,7 +9,7 @@ import { TitleModel } from '../models/redux-models';
 export const TitleCard = ({ title }: { title: TitleModel }) => {
   return (
     <Grid item key={title.id} sm={4} xs={6} md={3}>
-      <a href={`/movie-lens/title/${title.id}`}>
+      <a href={`/title/${title.id}`}>
         <Card
           sx={{
             height: '100%',

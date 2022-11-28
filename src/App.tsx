@@ -21,11 +21,11 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/movie-lens/' element={<Home />} />
-          <Route path='/movie-lens/search' element={<Search />} />
-          <Route path='/movie-lens/title/:id' element={<Title />} />
-          <Route path='/movie-lens/favourites' element={<Favourites />} />
-          <Route path='/movie-lens/watch-later' element={<WatchLater />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/search' element={<Search />} />
+          <Route path='/title/:id' element={<Title />} />
+          <Route path='/favourites' element={<Favourites />} />
+          <Route path='/watch-later' element={<WatchLater />} />
         </Routes>
       </BrowserRouter>
     </Container>

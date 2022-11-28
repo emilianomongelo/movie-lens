@@ -37,7 +37,7 @@ export const UserMenu = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <a href='/movie-lens/favourites'>
+        <a href='/favourites'>
           <MenuItem onClick={handleClose}>
             <FavoriteIcon />
             <Typography variant='subtitle1' align='center' color='text.primary' ml={1}>
@@ -45,7 +45,7 @@ export const UserMenu = () => {
             </Typography>
           </MenuItem>
         </a>
-        <a href='/movie-lens/watch-later'>
+        <a href='/watch-later'>
           <MenuItem onClick={handleClose}>
             <WatchLaterIcon />
             <Typography variant='subtitle1' align='center' color='text.primary' ml={1}>

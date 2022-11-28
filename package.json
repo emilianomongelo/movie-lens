@@ -13,6 +13,8 @@
   },
   "homepage": "https://react-movie-lens.herokuapp.com/",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.15",
     "@mui/material": "^5.10.15",
     "@reduxjs/toolkit": "^1.9.0",

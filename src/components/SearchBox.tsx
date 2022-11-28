@@ -34,7 +34,7 @@ export const SearchBox = ({ showSiteName = false }: { showSiteName?: boolean }) 
   const searchHandler = () => {
     if (formData.q) {
       dispatch(searchTitle(formData));
-      navigate(`/movie-lens/search?q=${formData.q}&genre=${formData.genre}&year=${formData.year}`);
+      navigate(`/search?q=${formData.q}&genre=${formData.genre}&year=${formData.year}`);
     }
   };
 
