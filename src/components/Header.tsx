@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -6,6 +6,7 @@ import { UserMenu } from './UserMenu';
 
 export const Header = () => {
   const { pathname } = useLocation();
+  console.log(pathname)
   return (
     <>
       <Grid container spacing={2}>
@@ -21,7 +22,7 @@ export const Header = () => {
           }}
         >
           {pathname !== '/' && (
-            <a href='/'>
+            <Link to='/'>
               <Typography
                 component='h1'
                 variant='h2'
@@ -34,7 +35,7 @@ export const Header = () => {
                   Lens
                 </Box>
               </Typography>
-            </a>
+            </Link>
           )}
         </Grid>
         <Grid

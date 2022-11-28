@@ -6,12 +6,14 @@
     "node": ">=12.0.0 <15"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://react-movie-lens.herokuapp.com/",
+  "homepage": "https://emilianomongelo.github.io/movie-lens",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -19,6 +21,7 @@
     "@mui/material": "^5.10.15",
     "@reduxjs/toolkit": "^1.9.0",
     "axios": "^1.2.0",
+    "gh-pages": "^4.0.0",
     "lodash": "^4.17.21",
     "ramda": "^0.28.0",
     "react": "^17.0.2",

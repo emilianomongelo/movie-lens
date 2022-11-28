@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -37,22 +38,22 @@ export const UserMenu = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <a href='/favourites'>
+        <Link to='/favourites'>
           <MenuItem onClick={handleClose}>
             <FavoriteIcon />
             <Typography variant='subtitle1' align='center' color='text.primary' ml={1}>
               Favourites
             </Typography>
           </MenuItem>
-        </a>
-        <a href='/watch-later'>
+        </Link>
+        <Link to='/watch-later'>
           <MenuItem onClick={handleClose}>
             <WatchLaterIcon />
             <Typography variant='subtitle1' align='center' color='text.primary' ml={1}>
               Watch later
             </Typography>
           </MenuItem>
-        </a>
+        </Link>
       </Menu>
     </>
   );

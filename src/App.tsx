@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Slide from '@mui/material/Slide';
@@ -18,7 +18,7 @@ function App() {
           <LinearProgress color='primary' />
         </Stack>
       </Slide>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -27,7 +27,7 @@ function App() {
           <Route path='/favourites' element={<Favourites />} />
           <Route path='/watch-later' element={<WatchLater />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Container>
   );
 }

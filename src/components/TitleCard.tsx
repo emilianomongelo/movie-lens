@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -9,7 +10,7 @@ import { TitleModel } from '../models/redux-models';
 export const TitleCard = ({ title }: { title: TitleModel }) => {
   return (
     <Grid item key={title.id} sm={4} xs={6} md={3}>
-      <a href={`/title/${title.id}`}>
+      <Link to={`/title/${title.id}`}>
         <Card
           sx={{
             height: '100%',
@@ -17,19 +18,14 @@ export const TitleCard = ({ title }: { title: TitleModel }) => {
             flexDirection: 'column',
           }}
         >
-          <CardMedia
-            component='img'
-            image={title.image ?? noPreview}
-            alt='random'
-            sx={{ height: '250px' }}
-          />
+          <CardMedia component='img' image={title.image ?? noPreview} alt='random' sx={{ height: '250px' }} />
           <CardContent sx={{ flexGrow: 1 }}>
             <Typography gutterBottom variant='h6'>
               {title.title} {title.description}
             </Typography>
           </CardContent>
         </Card>
-      </a>
+      </Link>
     </Grid>
   );
 };
