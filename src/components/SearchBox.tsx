@@ -109,7 +109,7 @@ export const SearchBox = ({ showSiteName = false }: { showSiteName?: boolean }) 
                 const value = event.target.value;
                 setFormData({ ...formData, year: value ? +value : '' });
               }}
-              renderValue={(selected) => (selected ? selected : 'Year')}
+              renderValue={(selected) => (selected ? selected : 'Year from')}
             >
               <MenuItem value=''>
                 <em>None</em>

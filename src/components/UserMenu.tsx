@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState, MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -9,9 +9,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 
 export const UserMenu = () => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {

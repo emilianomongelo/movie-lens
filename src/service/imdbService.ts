@@ -9,9 +9,9 @@ const imdbService = {
     const response = await Api().get('AdvancedSearch/k_1fthmbb9', {
       params: {
         title: searchParams.q,
-        release_date: searchParams.year ? `${searchParams.year}-01-01` : null,
-        title_type: 'feature',
-        limit: 50,
+        release_date: searchParams.year ? `${searchParams.year}-01-01,` : null,
+        title_type: 'feature,tv_movie',
+        count: 25,
         genres: searchParams.genre,
       },
     });

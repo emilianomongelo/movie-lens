@@ -12,7 +12,7 @@ import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import WatchLaterIconOutlined from '@mui/icons-material/WatchLaterOutlined';
 import { useAppDispatch, useAppSelector } from '../hooks/redux-hooks';
 import { ImdbPlayer, TitleDetailsColumn } from '../components';
-import {getTitle, reset} from '../store/titles/titles-actions';
+import { getTitle, reset } from '../store/titles/titles-actions';
 import { setFavourites, setWatchLater } from '../store/user/user-actions';
 
 export const Title = () => {
@@ -75,7 +75,7 @@ export const Title = () => {
 
             {/* Title Trailer Column */}
             {title?.trailer && (
-              <Grid item xs={12} sm={12} md={12} lg={6}>
+              <Grid item xs={12} sm={12} md={12} lg={6} sx={{ alignSelf: 'start' }}>
                 <ImdbPlayer url={title?.trailer}></ImdbPlayer>
               </Grid>
             )}

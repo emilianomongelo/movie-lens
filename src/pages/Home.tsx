@@ -4,21 +4,24 @@ import { SearchBox } from '../components';
 
 export const Home = () => {
   return (
-    <Container
-      sx={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'absolute',
-        transform: 'translateY(50%)',
-      }}
-    >
-      <CssBaseline />
-      {/* Search box */}
-      <SearchBox showSiteName={true} />
-    </Container>
+    <main className={'home-container'} style={{ position: 'relative' }}>
+      <Container
+        sx={{
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'absolute',
+          transform: { xs: 'translateY(20%)', sm: 'translateY(100%)' },
+        }}
+        disableGutters
+      >
+        <CssBaseline />
+        {/* Search box */}
+        <SearchBox showSiteName={true} />
+      </Container>
+    </main>
   );
 };

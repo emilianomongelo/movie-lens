@@ -6,13 +6,13 @@ import { UserMenu } from './UserMenu';
 
 export const Header = () => {
   const { pathname } = useLocation();
-  console.log(pathname)
   return (
-    <>
+    <header>
       <Grid container spacing={2}>
         <Grid
           item
           sm={8}
+          xs={10}
           pl={2}
           sx={{
             display: 'flex',
@@ -40,7 +40,8 @@ export const Header = () => {
         </Grid>
         <Grid
           item
-          md={4}
+          sm={4}
+          xs={2}
           sx={{
             display: 'flex',
             flexDirection: 'column',
@@ -52,6 +53,6 @@ export const Header = () => {
           <UserMenu />
         </Grid>
       </Grid>
-    </>
+    </header>
   );
 };

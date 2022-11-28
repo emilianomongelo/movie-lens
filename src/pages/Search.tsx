@@ -34,6 +34,7 @@ export const Search = () => {
           alignItems: 'center',
           justifyContent: 'start',
         }}
+        disableGutters
       >
         <CssBaseline />
         {/* Search box */}
