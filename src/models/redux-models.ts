@@ -1,5 +1,5 @@
 export interface TitleModel {
-  id: number;
+  id: string;
   title: string;
   description?: string | null;
   directors: string | null;
@@ -21,8 +21,19 @@ export interface TitleModel {
   backdrop: string | null;
 }
 
-export interface TitleArrayModel {
+export interface Genre {
+  id: string;
+  displayName: string;
+}
+
+export interface TitlesArrayModel {
+  loading: boolean;
   title: TitleModel | null;
   titles: TitleModel[];
-  genres: string[];
+  genres: Genre[];
+}
+
+export interface UserArrayModel {
+  favourites: string[];
+  watchLater: string[];
 }

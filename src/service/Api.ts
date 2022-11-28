@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export default () => {
-  return axios.create({
-    baseURL: 'https://imdb-api.com/en/API/',
-  });
-};
+const api = () => axios.create({
+  baseURL: 'https://imdb-api.com/en/API/',
+});
+
+export default api;

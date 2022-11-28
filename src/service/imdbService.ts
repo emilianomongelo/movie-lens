@@ -1,17 +1,18 @@
 import Api from './Api';
 import { pathOr } from 'ramda';
 import { TitleModel } from '../models/redux-models';
-import { FormData } from '../types';
+import { SearchParams } from '../types';
 
-export default {
-  async searchTitle(formData: FormData): Promise<TitleModel[]> {
+const imdbService = {
+  async searchTitle(searchParams: SearchParams): Promise<TitleModel[]> {
+    // TODO: API should be deployed separately to avoid hard-coding the api key
     const response = await Api().get('AdvancedSearch/k_1fthmbb9', {
       params: {
-        title: formData.title,
-        release_date: formData.year ? `${formData.year}-01-01` : null,
+        title: searchParams.q,
+        release_date: searchParams.year ? `${searchParams.year}-01-01` : null,
         title_type: 'feature',
         limit: 50,
-        genres: formData.genre,
+        genres: searchParams.genre,
       },
     });
 
@@ -40,9 +41,9 @@ export default {
   },
 
   async getTitle(titleId: string): Promise<TitleModel | null> {
+    // TODO: API should be deployed separately to avoid hard-coding the api key
     const response = await Api().get(`Title/k_1fthmbb9/${titleId}/Posters,Trailer,Ratings`);
     const item = response.data;
-    console.log(item);
     return item
       ? {
           id: item.id,
@@ -66,3 +67,5 @@ export default {
       : null;
   },
 };
+
+export default imdbService;

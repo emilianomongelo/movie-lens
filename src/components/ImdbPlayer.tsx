@@ -7,7 +7,7 @@ export const ImdbPlayer = ({ url }: { url: string }) => {
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: { sx: 'center', sm: 'center', md: 'end' },
+        alignItems: { sx: 'center', sm: 'center', md: 'center', lg: 'end' },
         justifyContent: 'center',
         pr: 0,
       }}
